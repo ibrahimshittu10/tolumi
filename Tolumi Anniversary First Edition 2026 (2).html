@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-frame-refused-watch=""><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tolumi Anniversary First Edition 2026</title>
+<style>
+:root{--bg:#fbf4f1;--ink:#3b2f2f;--muted:#8a7873;--sage:#a9bfa0;--sagedeep:#7d9a74;--pink:#f0c4cc;--earth:#c9998a;--card:#fff;--line:#ead9d3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#211b1b;--ink:#f4e9e6;--muted:#b3a09b;--sage:#6f8868;--sagedeep:#93b08a;--pink:#b5707f;--earth:#a8705f;--card:#2d2525;--line:#43383a}}
+:root[data-theme="dark"]{--bg:#211b1b;--ink:#f4e9e6;--muted:#b3a09b;--sage:#6f8868;--sagedeep:#93b08a;--pink:#b5707f;--earth:#a8705f;--card:#2d2525;--line:#43383a}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+main{max-width:480px;margin:0 auto;padding:28px 20px 40px;min-height:100vh;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.screen{display:none;animation:in .5s ease}.screen.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.tag{font:600 12px/1 system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+h1{font-size:30px;line-height:1.2;margin:0 0 14px;font-weight:600}
+h2{font-size:24px;margin:0 0 6px;font-weight:600}
+p{color:var(--muted);line-height:1.6;margin:0 0 22px;font-size:17px}
+.hint{font:14px system-ui,sans-serif;color:var(--muted);margin:-6px 0 22px}
+.btn{font:600 16px system-ui,sans-serif;background:var(--sagedeep);color:#fff;border:0;border-radius:999px;padding:14px 32px;cursor:pointer}
+.row{display:flex;gap:14px;justify-content:center}
+.scene{perspective:1000px}
+.card{width:100%;max-width:210px;aspect-ratio:3/4.2;position:relative;cursor:pointer;transition:transform .7s,opacity .5s;transform-style:preserve-3d;border:0;background:none;padding:0;margin:0 auto;display:block}
+.card.single{max-width:250px}
+.card.flipped{transform:rotateY(180deg)}
+.card.dim{opacity:.25;pointer-events:none}
+.face{position:absolute;inset:0;border-radius:20px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.front{color:#fff;font-size:16px;font-weight:600;border:6px solid rgba(255,255,255,.55)}
+.front span{font-size:34px;margin-bottom:10px}
+.sp{background:linear-gradient(135deg,var(--sage),var(--pink))}
+.ep{background:var(--earth)}
+.sg{background:var(--sage)}
+.back{background:var(--card);transform:rotateY(180deg);border:2px solid var(--line);color:var(--ink)}
+.back .ic{font-size:40px;margin-bottom:10px}
+.back b{font-size:19px;line-height:1.25;display:block}
+.back small{font:14px system-ui,sans-serif;color:var(--muted);margin-top:8px;display:block}
+#next{margin-top:26px;visibility:hidden;opacity:0;transition:opacity .5s}
+#next.show{visibility:visible;opacity:1}
+.it{text-align:left;margin:0 0 22px;padding:0;list-style:none;border-left:2px solid var(--line)}
+.it li{position:relative;padding:0 0 20px 22px}
+.it li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--sagedeep)}
+.it .t{font:600 13px system-ui,sans-serif;letter-spacing:.08em;color:var(--sagedeep)}
+.it b{display:block;font-size:19px;margin:2px 0}
+.it span{color:var(--muted);font-size:15px}
+#editBtn{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:12px;z-index:5;display:none;font:600 13px system-ui,sans-serif;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 16px;cursor:pointer}
+#ed{display:none;position:fixed;inset:0;z-index:9;background:var(--bg);overflow-y:auto;padding:calc(env(safe-area-inset-top,0px) + 20px) 20px calc(env(safe-area-inset-bottom,0px) + 30px);text-align:left;font-family:system-ui,sans-serif}
+#ed.on{display:block}
+#ed .in{max-width:480px;margin:0 auto}
+#ed h3{font:600 13px system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--sagedeep);margin:24px 0 8px}
+#ed label{display:block;font-size:13px;color:var(--muted);margin:10px 0 4px}
+#ed input,#ed textarea{width:100%;font:16px system-ui,sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px}
+#ed textarea{min-height:130px;resize:vertical}
+#ed .bar{display:flex;gap:10px;margin-top:26px}
+#ed .gh{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+</style>
+</head>
+<body>
+<button id="editBtn" onclick="openEd()">Edit</button>
+<main>
+<div id="app"></div>
+<button class="btn" id="next" style="display:none" onclick="adv()">Continue</button>
+</main>
+<div id="ed" class=""></div>
+<script type="application/json" id="cfg">{"welcome":"Happy anniversary, my love. A year ago I had no idea how much softer my days could become, and now I can’t imagine them without you. Today is all yours. I’ve planned the afternoon, but I’m leaving the choosing to you, one card at a time, because I want you to steer our day. Open them slowly, and let me love you through it.","hint":"A Tolumi Day! ","lunch":{"icon":"🦐","title":"Seafood Lunch Date","venue":"Shark House 101","time":"1:00 PM"},"a1":[{"icon":"🛼","title":"Rollerskating","venue":"Skate City, Purple Lekki Mall"},{"icon":"🤸","title":"Trampolining & Climbing","venue":"Upbeat Recreation Centre"}],"a1time":"2:45 PM","a2":[{"icon":"🕹️","title":"Arcade Games","venue":"Rufus & Bee, Twinwaters"},{"icon":"🎨","title":"Paint & Sip","venue":"Art and Co NG"}],"a2time":"4:45 PM","endtime":"7:00 PM"}</script>
+<script>
+var cfg=JSON.parse(document.getElementById("cfg").textContent),cur=0,pick={};
+function E(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function bk(o){return '<div class="ic">'+E(o.icon)+'</div><b>'+E(o.title)+'</b><small>'+E(o.venue)+'</small>'}
+function card(k,v,cls,em,label,o,single){return '<button class="card'+(single?' single':'')+'" data-k="'+k+'"'+(v===undefined?'':' data-v="'+v+'"')+'><div class="face front '+cls+'">'+label+'</div><div class="face back">'+bk(o)+'</div></button>'}
+function pair(k,n,list){return '<div class="tag">Activity '+n+'</div><h2>Choose a card</h2><p>Pick one. No peeking at the other.</p><div class="row scene">'+card(k,0,'ep','','Option 1',list[0])+card(k,1,'sg','','Option 2',list[1])+'</div>'}
+function render(){
+  document.getElementById("app").innerHTML=
+  '<section class="screen" id="s0"><div class="tag">1 Year Anniversary</div><h1>Tolumi Anniversary First Edition 2026</h1><p>'+E(cfg.welcome)+'</p><div class="hint">'+E(cfg.hint)+'</div><button class="btn" onclick="go(1)">Begin</button></section>'+
+  '<section class="screen" id="s1"><div class="tag">Activity 1</div><h2>Your first card</h2><p>Tap the card to open it.</p><div class="scene">'+card('lunch',undefined,'sp','🩷','Activity 1 Reveal',cfg.lunch,1)+'</div></section>'+
+  '<section class="screen" id="s2">'+pair('a1',2,cfg.a1)+'</section>'+
+  '<section class="screen" id="s3">'+pair('a2',3,cfg.a2)+'</section>'+
+  '<section class="screen" id="s4"><div class="tag">Your Itinerary</div><h2>The Full Afternoon</h2><p>Back at the hotel by '+E(cfg.endtime)+'.</p><ul class="it" id="itin"></ul><button class="btn" onclick="go(0)">Play again</button></section>';
+  document.querySelectorAll(".card").forEach(function(c){
+    c.addEventListener("click",function(){
+      if(c.classList.contains("flipped"))return;
+      if(c.dataset.v!==undefined){pick[c.dataset.k]=+c.dataset.v;c.parentNode.querySelectorAll(".card").forEach(function(o){if(o!==c)o.classList.add("dim")})}
+      c.classList.add("flipped");
+      setTimeout(function(){document.getElementById("next").classList.add("show")},900);
+    });
+  });
+}
+function go(n){
+  if(n===0){pick={};document.querySelectorAll(".card").forEach(function(c){c.classList.remove("flipped","dim")})}
+  document.querySelectorAll(".screen").forEach(function(s){s.classList.remove("on")});
+  document.getElementById("s"+n).classList.add("on");cur=n;
+  var nx=document.getElementById("next");nx.classList.remove("show");
+  nx.style.display=(n>=1&&n<=3)?"inline-block":"none";
+  if(n===4)build();
+  window.scrollTo(0,0);
+}
+function adv(){go(cur+1)}
+function build(){
+  var a=cfg.a1[pick.a1||0],b=cfg.a2[pick.a2||0];
+  var r=[[cfg.lunch.time,cfg.lunch.title,cfg.lunch.venue],[cfg.a1time,a.title,a.venue],[cfg.a2time,b.title,b.venue]];
+  document.getElementById("itin").innerHTML=r.map(function(x){return '<li><b>'+E(x[1])+'</b><span>'+E(x[2])+'</span></li>'}).join("");
+}
+function gp(p){return p.split(".").reduce(function(o,k){return o[k]},cfg)}
+function sp(p,v){var k=p.split("."),l=k.pop();k.reduce(function(o,x){return o[x]},cfg)[l]=v}
+function fld(l,p,ta){var v=E(gp(p));return '<label>'+l+'</label>'+(ta?'<textarea data-p="'+p+'">'+v+'</textarea>':'<input data-p="'+p+'" value="'+v+'">')}
+function grp(t,pre){return '<h3>'+t+'</h3>'+fld('Icon (emoji)',pre+'.icon')+fld('Name',pre+'.title')+fld('Venue',pre+'.venue')}
+function openEd(){
+  var d=document.getElementById("ed");
+  d.innerHTML='<div class="in"><h2 style="font-family:Georgia,serif">Edit game</h2>'+
+  '<h3>Welcome</h3>'+fld('Message','welcome',1)+fld('Small line under message','hint')+
+  '<h3>Hotel</h3>'+fld('Back at the hotel by','endtime')+
+  grp('Activity 1 (lunch)','lunch')+grp('Activity 2, card 1','a1.0')+grp('Activity 2, card 2','a1.1')+grp('Activity 3, card 1','a2.0')+grp('Activity 3, card 2','a2.1')+
+  '<div class="bar"><button class="btn" onclick="save()">Save</button><button class="btn gh" onclick="closeEd()">Cancel</button></div></div>';
+  d.classList.add("on");d.scrollTop=0;
+}
+function closeEd(){var d=document.getElementById("ed");d.classList.remove("on");d.innerHTML=""}
+async function save(){
+  document.querySelectorAll("#ed [data-p]").forEach(function(i){sp(i.dataset.p,i.value)});
+  var d=document.documentElement.cloneNode(true);
+  d.querySelector("#cfg").textContent=JSON.stringify(cfg).replace(/</g,"\\u003c");
+  d.querySelector("#app").innerHTML="";
+  var e=d.querySelector("#ed");e.innerHTML="";e.className="";
+  var b=d.querySelector("#editBtn");b.removeAttribute("style");
+  var n=d.querySelector("#next");n.className="btn";n.setAttribute("style","display:none");
+  try{var a=await claude.use("artifact");await a.publish("<!DOCTYPE html>\n"+d.outerHTML)}catch(x){alert("Couldn’t save. Please try again.")}
+}
+render();go(0);
+(async function(){try{var u=await claude.use("user");if(u&&u.canEdit())document.getElementById("editBtn").style.display="block"}catch(x){}})();
+</script>
+
+
+</body></html>
